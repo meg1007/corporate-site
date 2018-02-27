@@ -19,8 +19,7 @@ header{
   background: $gray_blue;
 
   #header_in{
-    padding-top: 10px;
-    padding-bottom:4px;
+    padding: 15px 0 10px 0;
   }
 
   @media (max-width: 550px) {
@@ -179,7 +178,6 @@ header{
 
   text-align: center;
   padding:80px 0;
-  padding: 40px 0;
 
   //retina_bg
 
@@ -192,8 +190,23 @@ header{
     background-image: url("../images/top/cover@2x.jpg");
 
   }
-
 }
+@media(min-width: 550px){
+  #cover_area{
+    text-align: left;
+    height: 420px;
+    padding: 0;
+  }
+}
+@media(min-width: 550px){
+  #cover_area{
+    img{
+    margin-top: 180px;
+    margin-left: 70px;
+    }
+  }
+} 
+
 #service_area{
  padding-top:　20px;
 
@@ -286,6 +299,7 @@ header{
     .news_title{
       @include fontsize(22);
       padding: 50px 0 41px 0;
+      letter-spacing: 0.2rem;
     }
 
     .news_lists{
@@ -496,7 +510,7 @@ h1{
       border-bottom-width: 3px;
       border-bottom-style: solid;
       border-bottom-color: rgb(66, 185, 208);
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
       padding-bottom: 15px;
       }
@@ -507,6 +521,13 @@ h1{
     }
   }
 }
+
+@media (min-width: 550px){
+  #contents {
+    padding-top: 35px;
+    padding-bottom: 70px;
+    }
+  }
 #sidebar{
   .pc_sidemenu{
     h3{
@@ -557,6 +578,19 @@ h1{
 
 //news.html
 
+#header_in{
+ padding-top: 10px;
+ padding-bottom: 4px;
+ .container{
+   position: relative;
+   width: 100%;
+   max-width: 960px;
+   padding: 0 20px;
+   box-sizing: border-box;
+ }
+}
+
+
 .contents{
   .container{
     padding-top: 35px;
@@ -565,7 +599,7 @@ h1{
     #main{
       padding-right: 20px;
       h2{
-        font-size: 20px;
+        font-size: 15px;
         padding-bottom: 20px;
         color: #42b9d0;
         border-bottom-width: 3px;
@@ -584,13 +618,30 @@ h1{
             margin-bottom: 1rem;
             color: #42b9d0;
             }
-          
-          @media (min-width: 550px){
-          list-style: none;
-          padding-bottom: 5px;
           }
         }
       }
+    }
+  }
+
+@media (min-width: 550px){
+  .contents{
+    .container{
+      .row{
+          #main{
+            .news_li{
+              li{
+                span{
+                  display: inline-block;
+                  margin-bottom: 0;
+                  padding-right: 10px;
+                  list-style: none;
+                  padding-bottom: 5px;
+                }
+              }
+            }
+          }
+      }    
     }
   }
 }

@@ -5,8 +5,7 @@ html {
 header {
   background: #eaf2f4; }
   header #header_in {
-    padding-top: 10px;
-    padding-bottom: 4px; }
+    padding: 15px 0 10px 0; }
   @media (max-width: 550px) {
     header .logo {
       width: 190px; }
@@ -96,13 +95,21 @@ header {
 #cover_area {
   text-align: center;
   padding: 80px 0;
-  padding: 40px 0;
   background-image: url("../images/top/cover.jpg");
   background-size: cover; }
   @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     #cover_area {
       background-image: url("../images/top/cover@2x.jpg"); } }
 
+@media (min-width: 550px) {
+  #cover_area {
+    text-align: left;
+    height: 420px;
+    padding: 0; } }
+@media (min-width: 550px) {
+  #cover_area img {
+    margin-top: 180px;
+    margin-left: 70px; } }
 #service_area {
   padding-top: 　20px; }
   @media (min-width: 551px) {
@@ -153,7 +160,8 @@ header {
     #news_area .news_title {
       font-size: 22px;
       font-size: 2.2rem;
-      padding: 50px 0 41px 0; }
+      padding: 50px 0 41px 0;
+      letter-spacing: 0.2rem; }
     #news_area .news_lists li {
       font-size: 14px;
       font-size: 1.4rem;
@@ -271,13 +279,17 @@ h1 {
         border-bottom-width: 3px;
         border-bottom-style: solid;
         border-bottom-color: #42b9d0;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: bold;
         padding-bottom: 15px; }
       #contents .container #main th, #contents .container #main td {
         font-size: 1.4rem;
         color: #626262; }
 
+@media (min-width: 550px) {
+  #contents {
+    padding-top: 35px;
+    padding-bottom: 70px; } }
 #sidebar .pc_sidemenu h3 {
   color: #42b9d0;
   font-size: 1.4rem;
@@ -313,6 +325,16 @@ h1 {
   #sidebar
   .pc_sidemenu {
     display: none; } }
+#header_in {
+  padding-top: 10px;
+  padding-bottom: 4px; }
+  #header_in .container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    padding: 0 20px;
+    box-sizing: border-box; }
+
 .contents .container {
   padding-top: 35px;
   padding-bottom: 70px;
@@ -320,7 +342,7 @@ h1 {
   .contents .container #main {
     padding-right: 20px; }
     .contents .container #main h2 {
-      font-size: 20px;
+      font-size: 15px;
       padding-bottom: 20px;
       color: #42b9d0;
       border-bottom-width: 3px;
@@ -337,9 +359,13 @@ h1 {
           font-weight: bold;
           margin-bottom: 1rem;
           color: #42b9d0; }
-        @media (min-width: 550px) {
-          .contents .container #main .news_li li {
-            list-style: none;
-            padding-bottom: 5px; } }
+
+@media (min-width: 550px) {
+  .contents .container .row #main .news_li li span {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: 10px;
+    list-style: none;
+    padding-bottom: 5px; } }
 
 /*# sourceMappingURL=sample.css.map */
